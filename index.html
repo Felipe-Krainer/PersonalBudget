@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Budget Planner</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Personal Budget Planner</h1>
+
+
+        <div class="budget-overview">
+            <p>Total Income: $<span id="total-income">0.00</span></p>
+            <p>Total Expenses: $<span id="total-expenses">0.00</span></p>
+            <p>Balance: $<span id="balance">0.00</span></p>
+        </div>
+
+
+        <div class="transaction-form">
+            <h2>Add New Transaction</h2>
+            <form id="transaction-form">
+                <input type="text" id="description" placeholder="Description" required>
+                <input type="number" id="amount" placeholder="Amount" required>
+                <select id="category">
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+                <button type="submit">Add Transaction</button>
+            </form>
+        </div>
+
+
+        <div class="transaction-list">
+            <h2>Transaction History</h2>
+            <ul id="transactions"></ul>
+        </div>
+    </div>
+
+    <script src="lib/jquery-3.7.1.js"></script>
+</body>
+</html>
